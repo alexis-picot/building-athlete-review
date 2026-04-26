@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se Connecter</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Médias/BAR_Favicon_Sans_Fond.png">
+</head>
+
+<body>
+    <div class="progress-bar"></div>
+    <header>
+        <nav class="nav">
+
+            <div class="nav-left">
+                <a href="index.html"><img src="Médias/BAR_Logo_Sans_Fond.png"></a>
+            </div>
+
+            <ul class="nav-center">
+                <li><a href="index.html"><span>Accueil</span></a></li>
+                <li><a href="les-news.html"><span>Les News</span></a></li>
+                <li><a href="plus.html"><span>Plus</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li>
+            </ul>
+
+            <div class="nav-right">
+                <input type="search" placeholder="Rechercher">
+
+                <a class="login-link" href="signup.html" aria-label="Créer un compte">
+                    <img src="Médias/login user logo sans fond.png" alt="">
+                </a>
+            </div>
+
+        </nav>
+    </header>
+    <main class="signup">
+        <section class="signup-card">
+            <h1>Créer un compte</h1>
+            <p class="signup-sub">Inscription rapide — Vous pourrez compléter votre profil plus tard</p>
+
+            <form class="signup-form" action="#" method="post">
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required autocomplete="email">
+                </div>
+
+                <div class="two-cols">
+                    <div class="field">
+                        <label for="lastname">Nom</label>
+                        <input id="lastname" name="lastname" type="text" required autocomplete="family-name">
+                    </div>
+
+                    <div class="field">
+                        <label for="firstname">Prénom</label>
+                        <input id="firstname" name="firstname" type="text" required autocomplete="given-name">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="birthdate">Date de naissance</label>
+                    <input id="birthdate" name="birthdate" type="date" required>
+                </div>
+
+                <fieldset class="field">
+                    <legend>Sexe</legend>
+
+                    <label class="radio">
+                        <input type="radio" name="sex" value="male" required>
+                        Homme
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="sex" value="female">
+                        Femme
+                    </label>
+                </fieldset>
+
+                <button class="btn-signup" type="submit">S’inscrire</button>
+
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

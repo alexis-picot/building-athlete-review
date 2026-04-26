@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAR | News</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Médias/BAR_Favicon_Sans_Fond.png">
+</head>
+
+<body>
+    <div class="progress-bar"></div>
+    <header>
+        <nav class="nav">
+
+            <div class="nav-left">
+                <a href="index.html"><img src="Médias/BAR_Logo_Sans_Fond.png"></a>
+            </div>
+
+            <ul class="nav-center">
+                <li><a href="index.html"><span>Accueil</span></a></li>
+                <li><a href="les-news.html"><span>Les News</span></a></li>
+                <li><a href="plus.html"><span>Plus</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li>
+            </ul>
+
+            <div class="nav-right">
+                <input type="search" placeholder="Rechercher">
+
+                <a class="login-link" href="signup.html" aria-label="Créer un compte">
+                    <img src="Médias/login user logo sans fond.png" alt="">
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="main-content">
+
+        <section class="news-section">
+            <h2>Les dernières news !</h2>
+
+            <div class="news-grid">
+                <!-- les plus récents en premier -->
+
+                <a href="post-goals-001-003.html" class="news-card" data-ref="GOALS-001-003">
+                    <img src="Médias/GOALS-001-003.png"
+                        alt="Miniature de la publication du record au 5000m route d'Alexis Picot.">
+                    <h3>Picot bat son record sur 5000m route !</h3>
+                    <p>Alexis Picot a battu son record personnel sur 5000 mètres route.</p>
+                    <p class="date-news-card">02 avril 2026</p>
+                </a>
+
+                <a href="post-train-002-002.html" class="news-card" data-ref="TRAIN-002-002">
+                    <img src="Médias/TRAIN-002-002.png"
+                        alt="Miniature de la publication concernant la rencontre inattendue d'Alexis en plein entraînement.">
+                    <h3>Une rencontre révélatrice</h3>
+                    <p>Alexis a fait la rencontre la moins attendue de sa vie lors d'un entraînement, découvrez
+                        laquelle.</p>
+                    <p class="date-news-card">31 mars 2026</p>
+
+                </a>
+
+                <a href="post-train-001-001.html" class="news-card" data-ref="TRAIN-001-001">
+                    <img src="Médias/TRAIN-001-001.png"
+                        alt="Miniature de la publication concernant le choix du programme d'Alexis.">
+                    <h3>Picot rompt avec KipRun</h3>
+                    <p>Alexis a tranché pour son programme d'entraînement.</p>
+                    <p class="date-news-card">07 février 2026</p>
+                </a>
+
+            </div>
+    </div>
+
+    </section>
+    </div>
+    <div class="cursor-circle"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

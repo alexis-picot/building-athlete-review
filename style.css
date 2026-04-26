@@ -1,0 +1,642 @@
+@font-face {
+    font-family: 'sifonn';
+    src: url(Fonts/SIFONN_PRO.otf);
+}
+
+@font-face {
+    font-family: 'indifference';
+    src: url(Fonts/GlacialIndifference-Regular.otf);
+}
+
+@font-face {
+    font-family: 'adumu';
+    src: url(Fonts/Adumu.ttf);
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url(Fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'seasons';
+    src: url(Fonts/The\ Seasons\ Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-content {
+    background: #FDECD8;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+    color: #1f2933;
+}
+
+body {
+    margin: 0;
+    background: white;
+}
+
+/* ===== HEADER / NAV ===== */
+header {
+    background: #f7a23b;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 20px;
+}
+
+/* ===== LOGO GAUCHE ===== */
+.nav-left a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-left img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* ===== MENU CENTRE ===== */
+.nav-center {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 0;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-center a {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 18px;
+
+    text-decoration: none;
+    font-family: 'poppins';
+    color: white;
+
+    background-color: #f7a23b;
+    border: 2px solid transparent;
+
+    transition: background-color 220ms ease, border-color 220ms ease;
+}
+
+/* texte seul animé */
+.nav-center a span {
+    display: inline-block;
+    transition: transform 180ms ease;
+}
+
+/* hover */
+.nav-center a:hover {
+    background-color: #e0821e;
+}
+
+.nav-center a:hover span {
+    transform: translateY(-5px) scale(1.2);
+}
+
+/* ===== ZONE DROITE ===== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.nav-right input {
+    height: 38px;
+    padding: 0 12px;
+}
+
+/* ===== LOGIN LINK ===== */
+.login-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
+.login-link img {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
+/* feedback discret */
+.login-link:hover img {
+    transform: scale(1.05);
+    transition: transform 150ms ease;
+}
+
+/* ===== SIGNUP PAGE ===== */
+.signup {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: 'poppins', Arial, sans-serif;
+    color: #111;
+}
+
+
+.signup h1 {
+    margin: 0 0 6px;
+    text-align: center;
+}
+
+.signup-sub {
+    margin: 0 0 18px;
+    opacity: 0.85;
+    text-align: center;
+}
+
+/* Form layout */
+.signup-form {
+    display: grid;
+    gap: 14px;
+}
+
+.field {
+    display: grid;
+    gap: 6px;
+}
+
+.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Inputs */
+.signup input[type="email"],
+.signup input[type="text"],
+.signup input[type="date"] {
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+}
+
+.signup input[type="date"] {
+    cursor: pointer;
+}
+
+
+/* Focus (clavier) */
+.signup input:focus {
+    border-color: #c0690b;
+}
+
+/* Radios */
+fieldset {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 12px;
+}
+
+legend {
+    padding: 0 8px;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+/* ✅ quand c'est coché, la "case" devient verte */
+.radio:has(input:checked) {
+    background: #96e01e;
+    border-color: #6fb300;
+    /* un vert un peu plus foncé pour le contour */
+}
+
+/* Button */
+.btn-signup {
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #f7a23b;
+    color: white;
+    font-family: 'poppins', Arial, sans-serif;
+    font-weight: 600;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.btn-signup:hover {
+    background: #e0821e;
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .two-cols {
+        grid-template-columns: 1fr;
+    }
+}
+
+.signup-card {
+    width: min(560px, 100%);
+    background: #fdcf97;
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* ===== SECTION ARTICLES ===== */
+
+.articles-section {
+    width: 90%;
+    margin: 80px auto;
+}
+
+.articles-section h2 {
+    text-align: center;
+    font-family: 'sifonn';
+    margin-bottom: 40px;
+}
+
+/* grille des articles */
+
+.article-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+/* carte article */
+
+.article-card {
+    background: #1f2933;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    font-family: 'poppins';
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.article-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* effet hover */
+
+.article-card:hover {
+
+    transform: translateY(-6px) scale(1.05);
+    color: #1F2933;
+    background-color: white;
+    box-shadow: 0 10px 20px #00000033;
+}
+
+/* image article */
+
+.article-card img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    background: #3a4753;
+    /* couleur si image manquante */
+}
+
+.intro-text {
+    width: 60%;
+    margin: 20px auto;
+}
+
+/* ===== SECTION NEWS ===== */
+
+.news-section {
+    width: 90%;
+    margin: 80px auto;
+}
+
+.news-section h2 {
+    text-align: center;
+    font-family: 'sifonn';
+    margin-bottom: 40px;
+}
+
+/* ===== GRILLE ===== */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== CARTE ===== */
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 12px;
+    background: #1f2933;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    font-family: 'poppins';
+
+    /* taille contrôlée ici */
+    width: 100%;
+    max-width: 300px;
+
+    /* animation apparition */
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.news-card h3 {
+    margin: 16px;
+    text-align: center;
+}
+
+.news-card p {
+    margin: 0 16px 20px 16px;
+    font-size: 14px;
+    opacity: 0.85;
+    text-align: center;
+}
+
+.date-news-card {
+    margin-top: auto;
+    margin-left: 16px;
+    align-self: flex-start;
+    font-family: 'seasons';
+    margin: 100px;
+    font-size: 12px;
+}
+
+.news-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== HOVER ===== */
+
+.news-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    color: #1F2933;
+    background-color: white;
+    box-shadow: 0 10px 20px #00000033;
+}
+
+/* ===== IMAGE ===== */
+
+.news-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    background: #3a4753;
+}
+
+.intro-text {
+    width: 60%;
+    margin: 20px auto;
+}
+
+h2 {
+    animation: float-horizontal 12s ease-in-out infinite;
+}
+
+@keyframes float-horizontal {
+
+    0% {
+        transform: translateX(-12px)
+    }
+
+    50% {
+        transform: translateX(12px)
+    }
+
+    100% {
+        transform: translateX(-12px)
+    }
+
+}
+
+.intro-text h1,
+h2,
+h3 {
+
+    font-family: 'sifonn';
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.intro-text p {
+
+    font-family: 'indifference';
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.article-card h3 {
+
+    margin: 16px;
+
+    font-size: 20px;
+}
+
+/* description */
+
+.article-card p {
+
+    margin: 0 16px 20px 16px;
+
+    font-size: 14px;
+
+    opacity: 0.85;
+}
+
+.cursor-circle {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background: rgb(247, 162, 59, 0.35);
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    transition: transform 0.05s linear;
+}
+
+.cursor-circle.dark {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.cursor-circle.big {
+    width: 40px;
+    height: 40px;
+}
+
+.progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #f7a23b;
+    width: 0%;
+    z-index: 9999;
+}
+
+/*animations pour 'News' */
+@keyframes pulse-news {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.15);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nav-news span {
+    display: inline-block;
+    animation: pulse-news 5s infinite;
+}
+
+.post {
+    max-width: 800px;
+    margin: auto;
+}
+
+.post h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'sifonn';
+}
+
+.post-image-container {
+    position: relative;
+    text-align: center;
+}
+
+.post-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* boutons */
+.image-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-actions button,
+.download-btn {
+    padding: 8px 14px;
+    border: none;
+    background: #f7a23b;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.image-actions button:hover,
+.download-btn:hover {
+    background: #e0821e;
+}
+
+/* texte */
+.post-content {
+    margin-top: 30px;
+    font-family: 'indifference';
+    line-height: 1.7;
+}
+
+/* copyright */
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 5px;
+    font-family: 'glacial indifference';
+}
+
+.post-image.zoomed {
+    transform: scale(1.8);
+    z-index: 1000;
+}

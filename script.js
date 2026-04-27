@@ -97,3 +97,34 @@ if (zoomBtn && image) {
     });
 
 }
+
+/* disclaimer */
+
+const disclaimer = document.getElementById("disclaimer");
+const closeBtn = document.getElementById("close-disclaimer");
+const overlay = document.getElementById("overlay");
+
+if (disclaimer && closeBtn && overlay) {
+
+    if (!localStorage.getItem("disclaimerSeen")) {
+
+        // 🔒 bloque scroll
+        document.body.style.overflow = "hidden";
+
+        // apparition
+        setTimeout(() => {
+            disclaimer.classList.add("show");
+            overlay.classList.add("show");
+        }, 300);
+    }
+
+    closeBtn.addEventListener("click", () => {
+        disclaimer.classList.remove("show");
+        overlay.classList.remove("show");
+
+        // 🔓 débloque scroll
+        document.body.style.overflow = "auto";
+
+        localStorage.setItem("disclaimerSeen", "true");
+    });
+}

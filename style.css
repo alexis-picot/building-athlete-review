@@ -346,19 +346,6 @@ legend {
     margin: 20px auto;
 }
 
-/* ===== SECTION NEWS ===== */
-
-.news-section {
-    width: 90%;
-    margin: 80px auto;
-}
-
-.news-section h2 {
-    text-align: center;
-    font-family: 'sifonn';
-    margin-bottom: 40px;
-}
-
 /* ===== GRILLE ===== */
 
 .news-grid {
